@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="Console">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+    <Scripts>
+        <Script name="ColoredConsole" language="js">
+            <![CDATA[
+                function logEvent(event) {
+                    var level = event.level;
+                    var msg = event.message.getFormattedMessage();
+                    switch (level) {
+                        case "INFO":
+                            return "\u001B[32m" + msg + "\u001B[0m"; // Green
+                        case "PASS":
+                            return "\u001B[33m" + msg + "\u001B[0m"; // Yellow
+                        case "FAIL":
+                            return "\u001B[31m" + msg + "\u001B[0m"; // Red
+                        default:
+                            return msg;
+                    }
+                }
+            ]]>
+        </Script>
+    </Scripts>
+</Configuration>
