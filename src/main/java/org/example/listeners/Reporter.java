@@ -7,8 +7,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.core.layout.MarkerPatternSelector;
 import org.example.browserFactory.Browsers;
 public class Reporter extends Browsers {
     private static ExtentReports extentReports;
@@ -52,7 +55,8 @@ public class Reporter extends Browsers {
      */
     public static String pass(String description) {
         ExtentReportListeners.getExtentTest().pass(description);
-        logger.info(description);
+        logger.log(Level.getLevel("PASS"), description);
+        //logger.info(description);
         return description;
     }
 
@@ -64,7 +68,8 @@ public class Reporter extends Browsers {
      */
     public static String fail(String description) {
         ExtentReportListeners.getExtentTest().info(description);
-        logger.error(description);
+        logger.log(Level.getLevel("FAIL"), description);
+        //logger.error(description);
         return description;
     }
 
@@ -76,7 +81,8 @@ public class Reporter extends Browsers {
      */
     public static String skip(String description) {
         ExtentReportListeners.getExtentTest().skip(description);
-        logger.info(description);
+        logger.log(Level.getLevel("SKIP"), description);
+        //logger.info(description);
         return description;
     }
 

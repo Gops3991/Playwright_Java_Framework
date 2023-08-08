@@ -29,12 +29,11 @@ public class ProjectAnnotations extends Browsers {
     public void testPrep() throws Exception {
         System.out.println("Before..test");
         //here lies the created page
-
     }
 
     @BeforeClass(alwaysRun = true)
     public void setup() throws Exception {
-        initBrowser(true,false,true);
+        initBrowser(false,false,true);
         System.out.println("Before..class");
     }
 
@@ -54,18 +53,18 @@ public class ProjectAnnotations extends Browsers {
         getPage().close();
         getContext().close();
     }
+
     @AfterClass(alwaysRun = true)
     public void tearDown(){
         getPlaywright().close();
         System.out.println("after..class");
-
     }
 
     @AfterTest(alwaysRun = true)
     public void testCleanUp(){
         System.out.println("after..test");
-
     }
+
     @AfterSuite(alwaysRun = true)
     public void testDone(){
         System.out.println("after..suite");
