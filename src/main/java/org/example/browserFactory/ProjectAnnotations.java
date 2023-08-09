@@ -33,7 +33,7 @@ public class ProjectAnnotations extends Browsers {
 
     @BeforeClass(alwaysRun = true)
     public void setup() throws Exception {
-        initBrowser(false,false,true);
+        initBrowser(true,false,false);
         System.out.println("Before..class");
     }
 
