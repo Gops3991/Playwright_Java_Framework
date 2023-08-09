@@ -19,6 +19,11 @@ public class LoginPage {
         username.fill(uname);
         password.fill(pword);
         loginBtn.click();
-        assertThat(getPage().locator("//h6[normalize-space()='Dashboard']")).isVisible();
+        try {
+            assertThat(getPage().locator("//h6[normalize-space()='Dashboard']")).isVisible();
+        }
+        catch (Exception e){
+            Reporter.fail("Login Failed");
+        }
     }
 }

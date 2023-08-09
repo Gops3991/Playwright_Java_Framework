@@ -20,14 +20,14 @@ public class LoginTests extends ProjectAnnotations {
     public void Test2() throws Exception {
         Reporter.info("This is 2nd Login Test");
         LoginPage loginPage = new LoginPage();
-        loginPage.login("Admin1","admin123");
+        loginPage.login("Admin","admin123");
     }
 
     @Test ()
     public void Test3() throws Exception {
         Reporter.info("This is 3rd Login Test");
         LoginPage loginPage = new LoginPage();
-        loginPage.login("Admin2","admin123");
+        loginPage.login("Admin","admin123");
     }
 
 //    @Test

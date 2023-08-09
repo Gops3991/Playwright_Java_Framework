@@ -43,7 +43,8 @@ public class Reporter extends Browsers {
      */
     public static String info(String description) {
         ExtentReportListeners.getExtentTest().info(description);
-        logger.info(description);
+        logger.log(Level.INFO, description);
+//      logger.info(description);
         return description;
     }
 

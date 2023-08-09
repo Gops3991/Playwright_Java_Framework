@@ -8,11 +8,6 @@
   "documentTitle": "ExtentReports",
   "reportName": "PlayWright Automation Report",
   "timeStampFormat": "MMM dd, yyyy HH:mm:ss a",
-  "js": "var timeStamp = document.querySelector('p.text-sm span').textContent\n\"Start Time: \".concat(timeStamp.slice(0,timeStamp.lastIndexOf(':')))",
+  "js": "",
   "css": ""
-
-
-
-
-
 }
