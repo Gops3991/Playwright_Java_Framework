@@ -29,20 +29,4 @@ public class LoginTests extends ProjectAnnotations {
         LoginPage loginPage = new LoginPage();
         loginPage.login("Admin","admin123");
     }
-
-//    @Test
-//    public void Test2(){
-//        System.out.println("This is 2nd Login Test");
-//        username.fill("Admin1");
-//        password.fill("admins123");
-//        loginBtn.click();
-//    }
-//
-//    @Test
-//    public void Test3(){
-//        System.out.println("This is 3rd Login Test");
-//        username.fill("Admin2");
-//        password.fill("admins123");
-//        loginBtn.click();
-//    }
 }

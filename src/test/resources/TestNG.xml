@@ -12,8 +12,8 @@
         <parameter name="browser" value="chrome" />
         <classes>
             <class name="org.example.tests.LoginTests" />
-<!--            <class name="org.example.tests.Longin1" />-->
-<!--            <class name="org.example.tests.Longin2" />-->
+            <class name="org.example.tests.Longin1" />
+            <class name="org.example.tests.Longin2" />
         </classes>
     </test>
 
