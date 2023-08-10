@@ -14,7 +14,7 @@ public class Longin2 extends ProjectAnnotations {
     Logger log;
 
     @Test ()
-    public void Test1() throws Exception {
+    public void Test7() throws Exception {
         Reporter.info("This is 7th Login Test");
         Locator username = getPage().locator("//input[@name='username']");
         Locator password = getPage().locator("//input[@name='password']");
@@ -25,7 +25,7 @@ public class Longin2 extends ProjectAnnotations {
     }
 
     @Test ()
-    public void Test2() throws Exception {
+    public void Test8() throws Exception {
         Reporter.info("This is 8th Login Test");
         Locator username = getPage().locator("//input[@name='username']");
         Locator password = getPage().locator("//input[@name='password']");
@@ -36,7 +36,7 @@ public class Longin2 extends ProjectAnnotations {
     }
 
     @Test ()
-    public void Test3() throws Exception {
+    public void Test9() throws Exception {
         Reporter.info("This is 9th Login Test");
         Locator username = getPage().locator("//input[@name='username']");
         Locator password = getPage().locator("//input[@name='password']");
