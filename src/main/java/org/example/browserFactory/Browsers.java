@@ -43,7 +43,6 @@ public class Browsers {
         return threadLocal_Playwright.get();
     }
 
-
     public static Browser getBrowser() {
         return threadLocal_Browser.get();
     }

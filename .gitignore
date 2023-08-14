@@ -1,3 +1,4 @@
+logs/
 target/
 screenshot/
 !.mvn/wrapper/maven-wrapper.jar
