@@ -7,7 +7,7 @@
 # documentation.
 
 name: Java CI with Maven
-run-name: ${{ github.actor }} has triggered the Workflow
+run-name: ${{ github.actor }} has triggered the Workflow job of ${{github.repository}}
 
 on:
   push:
@@ -27,6 +27,23 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean install 
+
+    - name: Send E-Mail Notification
+      if: always()
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: test.smithy2988@gmail.com
+        password: ndwdtfbyavtyxtuw
+
+        from: Github Actions
+        to: gopalg@testrig.co.in
+        subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+        body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has [ ${{ job.status }} ], Refer to attached Report for Details!
+        attachments: ./src/test/resources/config/config.properties
+        
+
 #   ubuntu-latest:
 #     runs-on: ubuntu-latest
 #     steps:
