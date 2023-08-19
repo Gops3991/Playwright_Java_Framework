@@ -6,6 +6,7 @@
 
     <listeners>
         <listener class-name="org.example.listeners.ExtentReportListeners" />
+        <listener class-name="org.example.listeners.TestNGFilterListener" />
     </listeners>
 
     <test name="Test_chrome">

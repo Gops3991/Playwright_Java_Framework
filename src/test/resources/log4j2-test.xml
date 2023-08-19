@@ -8,7 +8,7 @@
     </CustomLevels>
     <Appenders>
         <Console name="ColoredConsole" target="SYSTEM_OUT">
-            <PatternLayout pattern="%highlight{%d{HH:mm:ss.SSS} --- thread_id=%tid [%-5level] %logger{36} - %msg%n}{INFO=blue, PASS=green, FAIL=yellow SKIP= orange}" disableAnsi="false"/>
+            <PatternLayout pattern="%highlight{%d{HH:mm:ss.SSS} --- thread_id=%tid [%-5level] %logger{36} - %msg%n}{INFO=blue, PASS=green, FAIL=yellow}" disableAnsi="false"/>
         </Console>
         <File name="File" fileName="logs/log4j2.log" append="true">
             <PatternLayout>
@@ -16,14 +16,15 @@
             </PatternLayout>
         </File>
     </Appenders>
+
     <Loggers>
-        <Logger level="info">
-            <AppenderRef ref="ColoredConsole"/>
-        </Logger>
+<!--        <Logger level="info" name="StreamConsole">-->
+<!--            -->
+<!--        </Logger>-->
         <Root level="info">
             <AppenderRef ref="File"/>
+            <AppenderRef ref="ColoredConsole"/>
         </Root>
     </Loggers>
-
 
 </Configuration>

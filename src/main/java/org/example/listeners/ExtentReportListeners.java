@@ -75,7 +75,7 @@ public class ExtentReportListeners implements ITestListener, IAnnotationTransfor
 
     @Override
     public synchronized void onFinish(ITestContext context) {
-        logger.info(("Test Suite is ending!"));
+//logger.info(("Test Suite is ending!"));
         extentReports.flush();
 
         // Open Report and trace after the run is complete

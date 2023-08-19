@@ -5,6 +5,7 @@ import com.microsoft.playwright.Page;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.ThreadContext;
+import org.example.annotationsFramework.TagGroups;
 import org.example.browserFactory.ProjectAnnotations;
 import org.example.listeners.Reporter;
 import org.testng.annotations.Test;
@@ -13,7 +14,7 @@ import org.testng.annotations.Test;
 public class Longin1 extends ProjectAnnotations {
     Logger log;
 
-
+    @TagGroups(tags = {"sanity"})
     @Test ()
     public void Test4() throws Exception {
         Reporter.info("This is 4th Login Test");
@@ -25,6 +26,7 @@ public class Longin1 extends ProjectAnnotations {
         loginBtn.click();
     }
 
+    @TagGroups(tags = {"regression"})
     @Test ()
     public void Test5() throws Exception {
         Reporter.info("This is 5th Login Test");
@@ -36,6 +38,7 @@ public class Longin1 extends ProjectAnnotations {
         loginBtn.click();
     }
 
+    @TagGroups(tags = {"sanity"})
     @Test ()
     public void Test6() throws Exception {
         Reporter.info("This is 6th Login Test");
